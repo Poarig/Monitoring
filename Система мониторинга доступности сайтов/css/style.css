@@ -1,0 +1,298 @@
+/* Основные стили */
+body {
+  background-color: #3486ad; /* Темный фон для всего тела */
+  color: #fff; /* Белый текст */
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.app-container {
+  font-family: sans-serif;
+  padding: 20px;
+}
+
+header {
+  border-bottom: 1px solid #333;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  /* Добавляем flexbox для позиционирования заголовка и кнопки */
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Вертикальное выравнивание по центру */
+}
+
+header h1 {
+  color: #212121;
+  text-transform: uppercase;
+  /* Задаем ширину, чтобы заголовок не растягивался на всю ширину */
+  width: auto;
+  font-weight: 900;
+}
+
+.site-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  /* Добавляем отступы по бокам */
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1700px; /* Или любое другое значение, ограничивающее ширину */
+}
+
+@media (max-width: 1700px){
+  .site-list {
+    max-width: 1350px;
+}
+}
+
+@media (max-width: 1400px){
+  .site-list {
+    max-width: 1006px;
+}
+}
+
+@media (max-width: 1065px){
+  .site-list {
+    max-width: 665px;
+}
+}
+
+@media (max-width: 740px){
+  .site-list {
+    max-width: 322px;
+}
+}
+
+.site-card {
+  border: 1px solid #333333;
+  padding: 10px;
+  width: 300px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #212121;
+}
+
+.site-card h3 {
+  margin-top: 0;
+  color: #eee;
+}
+
+.status-indicator {
+  font-weight: bold;
+}
+
+.up {
+  color: #ffffff;
+}
+
+.down {
+  color: #ffffff;
+}
+
+.downtime-chart {
+  height: 20px;
+  width: 100%;
+  background-color: #333;
+  margin-top: 5px;
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+  border: solid 1px white;
+}
+
+.downtime-bar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  border-left: solid 1px;
+}
+
+.downtime-bar.down {
+  border-color: #5c0819;
+  background-color: #5c0819;
+}
+
+.downtime-bar.up {
+  border-color: #4b8627;
+  background-color: #4b8627;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+  background-color: #303030;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #555;
+  width: 80%;
+}
+
+.close-button {
+  color: #777;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: #ccc;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  background-color: #212121;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #474646;
+}
+
+footer {
+  border-top: 1px solid #333;
+  padding-top: 10px;
+  margin-top: 20px;
+  text-align: center;
+  color: #777;
+}
+
+.modal-content label {
+  display: block;
+  margin-bottom: 5px;
+  color: #eee;
+}
+
+.modal-content input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #555;
+  background-color: #424242;
+  color: #eee;
+  border-radius: 4px;
+}
+
+.modal-content input[type="text"]:focus {
+  outline: none;
+  border-color: #bb86fc;
+}
+
+#site-details-container {
+  padding: 20px;
+  border: 1px solid #333;
+  margin-bottom: 20px;
+  background-color: #212121;
+  border-radius: 5px;
+}
+
+#status-changes-chart {
+  width: 100%;
+  height: 200px;
+  background-color: #333;
+  border: 1px solid #555;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+#site-details-container h2,
+#site-details-container p {
+  color: #fff;
+}
+
+#save-site-button {
+  margin-top: 15px;
+}
+
+#add-site-form label {
+  display: block;
+  margin-bottom: 5px;
+  color: #eee;
+}
+
+#add-site-form input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #555;
+  background-color: #424242;
+  color: #eee;
+  border-radius: 4px;
+}
+
+#add-site-form input[type="text"]:focus {
+  outline: none;
+  border-color: #bb86fc;
+}
+
+#timeline-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8em;
+  color: white;
+}
+
+#timeline .downtime-bar:hover {
+  border: solid 1px white;
+  z-index: 10;
+}
+
+/* Стили для кнопки добавления сайта */
+.add-site-button-container {
+  /* По умолчанию: кнопка справа */
+  display: block;
+}
+
+/* Медиа-запрос для маленьких экранов */
+@media (max-width: 768px) {
+  header {
+    /* Меняем на блочное отображение */
+    display: block;
+    text-align: center;
+  }
+
+  /* Кнопка под заголовком */
+  .add-site-button-container {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  header h1 {
+    width: 100%; /* Заголовок занимает всю ширину */
+  }
+
+  .site-list {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+#add-site-button {
+  text-transform: uppercase;
+  font-size: 1.3em;
+}

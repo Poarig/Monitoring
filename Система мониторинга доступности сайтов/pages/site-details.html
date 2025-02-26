@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мониторинг сайтов</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <a href="../index.html"><h1>Мониторинг сайтов</h1></a>
+        </header>
+
+        <main>
+            <section id="site-header">
+                <h2 id="site-name">Название сайта</h2>
+                <p>
+                    <a id="site-url" href="#" target="_blank">Ссылка на сайт</a>
+                </p>
+            </section>
+
+            <section id="timeline-container" class="">
+                <h3>Временная шкала (последние 24 часа)</h3>
+
+                <div id="timeline" class="downtime-chart"></div>
+
+                <div id="timeline-labels">
+                    <!--Временные метки-->
+                </div>
+            </section>
+
+            <section id="statistics-container">
+                <h3>Статистика</h3>
+                <ul>
+                    <li>Аптайм за последние 24 часа: <span id="uptime">Процент времени когда сайт был доступен </span>%</li>
+                    <li>Всего даунтаймов за всё время: <span id="downtimes-number">Количество случаев когда сайт был не доступен</span></li>
+                </ul>
+            </section>
+
+            <section id="recent-events-container">
+                <h3>Последние события</h3>
+                <ul id="last-events">
+                    <li>[Время] Сайт перешел в состояние [Состояние]</li>
+                    <li>[Время] Сайт перешел в состояние [Состояние]</li>
+                </ul>
+            </section>
+
+        </main>
+
+        <footer>
+        </footer>
+    </div>
+    <script src="../js/constants.js"></script>
+    <script src="../js/site-details.js"></script>
+</body>
+</html>
